@@ -1,11 +1,15 @@
 {
     "version": 2,
     "builds": [
-      {
-        "src": "app.py",
-        "use": "@vercel/python"
-      }
-    ],
+        {
+          "src": "app.py",
+          "use": "@vercel/python",
+          "config": {
+            "maxDuration": 30,
+            "memory": 1024
+          }
+        }
+      ],
     "routes": [
       {
         "src": "/(.*)",
@@ -13,5 +17,4 @@
       }
     ]
   }
-  
   

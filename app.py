@@ -9,7 +9,7 @@ import random
 app = Flask(__name__)
 
 # Directory for storing uploaded/generated files
-UPLOAD_FOLDER = 'generated_image_video'
+UPLOAD_FOLDER = '/tem/generated_image_video'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 # Ensure the folder exists
