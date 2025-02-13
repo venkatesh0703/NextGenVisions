@@ -200,4 +200,5 @@ def download_video(filename):
         return jsonify({"error": "File not found"}), 404
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.getenv('PORT', 5000))  # Get assigned port from Render
+    app.run(host='0.0.0.0', port=port, debug=True)
