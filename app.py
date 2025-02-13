@@ -9,12 +9,12 @@ import random
 app = Flask(__name__)
 
 # Directory for storing uploaded/generated files
-UPLOAD_FOLDER = '/tem/generated_image_video'
+UPLOAD_FOLDER = '/tmp/generated_image_video'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 # Ensure the folder exists
 if not os.path.exists(UPLOAD_FOLDER):
-    os.makedirs(UPLOAD_FOLDER)
+    os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 # API Keys for different services
 PIXABAY_API_KEY = "47951810-c4682d024220e08ba9848ab4c"  # Replace with your Pixabay API key
